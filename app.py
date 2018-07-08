@@ -12,9 +12,44 @@ favicon = app.url_for('static', 'favicon.png')
 
 @app.route('/')
 async def test(request):
+    global favicon
     template = env.get_template('index.html')
     html_content = template.render(favicon=favicon)
     return html(html_content)
 
+@app.route('/about-us')
+async def test(request):
+    global favicon
+    template = env.get_template('aboutus.html')
+    html_content = template.render(favicon=favicon)
+    return html(html_content)
+
+@app.route('/features')
+async def test(request):
+    global favicon
+    template = env.get_template('features.html')
+    html_content = template.render(favicon=favicon)
+    return html(html_content)
+
+@app.route('/getting-started')
+async def test(request):
+    global favicon
+    template = env.get_template('gettingstarted.html')
+    html_content = template.render(favicon=favicon)
+    return html(html_content)
+
+@app.route('/signin')
+async def test(request):
+    global favicon
+    template = env.get_template('signin.html')
+    html_content = template.render(favicon=favicon)
+    return html(html_content)
+
+@app.route('/signup')
+async def test(request):
+    global favicon
+    template = env.get_template('signup.html')
+    html_content = template.render(favicon=favicon)
+    return html(html_content)
 
 app.run(host="0.0.0.0", port=8000)
