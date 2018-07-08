@@ -8,7 +8,7 @@ env = Environment(loader=PackageLoader('app', 'templates'))
 
 app = Sanic(__name__)
 app.static('/static', './static')
-favicon = app.url_for('static', 'favicon.png')
+favicon = app.url_for('static', filename='favicon.png')
 
 @app.route('/')
 async def test(request):
