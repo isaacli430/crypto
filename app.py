@@ -8,11 +8,12 @@ env = Environment(loader=PackageLoader('app', 'templates'))
 
 app = Sanic(__name__)
 app.static('/static', './static')
+favicon = app.url_for('static', 'favicon.png')
 
 @app.route('/')
 async def test(request):
     template = env.get_template('index.html')
-    html_content = template.render()
+    html_content = template.render(favicon=favicon)
     return html(html_content)
 
 
