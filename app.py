@@ -15,13 +15,14 @@ class GlobalVars:
         self.logo_large = app.url_for('static', filename='logo-large.png')
         self.main_css = app.url_for('static', filename='main.css')
         self.placeholder1 = app.url_for('static', filename='placeholder1.jpg')
+        self.placeholder2 = app.url_for('static', filename='placeholder2.jpg')
 
 gvars = GlobalVars()
 
 @app.route('/')
 async def test(request):
     template = env.get_template('index.html')
-    html_content = template.render(favicon=gvars.favicon, logo_large=gvars.logo_large, css=gvars.main_css, p1=gvars.placeholder1)
+    html_content = template.render(favicon=gvars.favicon, logo_large=gvars.logo_large, css=gvars.main_css, p1=gvars.placeholder1, p2=gvars.placeholder2)
     return html(html_content)
 
 @app.route('/about-us')
