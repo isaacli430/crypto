@@ -3,13 +3,12 @@ html, body {
     overflow-x: hidden;
 }
 
-header.bg-index {
+.index-container {
     position: relative;
     background-color: #343a40;
     background: url("/static/placeholder1.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 12rem;
 }
