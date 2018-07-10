@@ -2,3 +2,13 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+header.bg-index {
+    position: relative;
+    background-color: #343a40;
+    background: url("/static/placeholder1.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
